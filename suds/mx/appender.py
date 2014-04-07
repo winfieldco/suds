@@ -220,11 +220,16 @@ class PropertyAppender(Appender):
     def append(self, parent, content):
         p = content.value
         child = self.node(content)
-        child.setText(p.get())
-        parent.append(child)
-        for item in p.items():
-            cont = Content(tag=item[0], value=item[1])
-            Appender.append(self, child, cont)
+        
+        child_value = p.get()
+        if(child_value is None):
+            pass
+        else:        
+            child.setText(p.get())
+            parent.append(child)
+            for item in p.items():
+                cont = Content(tag=item[0], value=item[1])
+                Appender.append(self, child, cont)
 
             
 class ObjectAppender(Appender):

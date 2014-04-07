@@ -1,3 +1,19 @@
+-----------------
+Notes
+-----------------
+Updated to fix various null pointer errors
+
+-----------------
+Installation
+-----------------
+python setup.py install
+
+
+
+
+
+
+
 OVERVIEW
 
 The "Suds" web services client is a lightweight soap-based client for python
